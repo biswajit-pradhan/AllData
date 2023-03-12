@@ -1,0 +1,95 @@
+npx=node package execute,
+npm=node package manager
+
+react-script help us to start the app
+
+react always calls render() method,render() must return something(JSX)
+
+Display Array
+
+always use super() when ever we use constructor in JavaScript
+
+Lifecycle Hook
+==============
+1.Constructor--define and declare
+2.componentdidmount()--prepare the data
+3.render--display on screen
+
+npm install bootstrap
+
+taking input from the user and validating it
+============================================
+steps
+=====
+1.Create a state for the form
+2.Update the state when the user enters the value
+
+
+Post API
+========
+
+
+npm i react-router@6.2.2
+
+npm i react-router-dom@6.2.2
+
+
+
+
+in redux task is called as action.
+redux is basically a smart storage which notifies us  when someone make some changes in their code.
+
+
+store-reducer-actions-components
+
+npm i react-redux
+
+npm i @reduxjs/toolkit
+
+npm i redux-thunk
+
+payload is the data
+
+step-1
+======
+import necessary libraries
+
+step-2
+======
+create store
+
+step-3
+======
+create reducer
+
+
+
+call the api save the data and dispatch to reducer
+
+action->reducer->store->component(store will give the data to component)
+
+
+
+
+if we want actions to return functions to reducer then we must use redux-thunk. we can directly return functions to reducer by usring objects but that is not recommended
+
+
+[redux-thunk is a middlewire]
+
+
+mapStateToProps() is used to connect a ract component to a redux store.
+
+
+connect function is used to create a higher order component that connects component on which you are geting redux-store data.
+
+<container-fliud>
+
+
+
+
+
+1.constructor-> 2.render-> 3.componentDidMount
+
+
+Redux- Global State Management,Single Source of Truth
+

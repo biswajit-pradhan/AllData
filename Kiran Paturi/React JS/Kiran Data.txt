@@ -1,0 +1,41 @@
+npx create-react-app demo ====>this command for installing the react app
+
+npm start ==command to start the react server
+
+every react component returns only one html tag.That html tag can have multiple tags.
+
+accessing data using props==> in the receiver end we have to use "props" keyword to access data from another component
+
+
+Assignment
+==========
+
+Create 10 products and iterate over that
+
+useState in React JS
+
+Conditional Rendering in React
+
+Toggle Button using React
+
+
+Assignment
+==========
+
+Button Component click on it pricing should be incemrnted by 1-----Header
+
+
+bind options,
+
+building reusable components
+
+How to fetch APIs
+
+npm start
+
+npm i --save axios
+
+install npm
+
+
+for running custom API you have to write "proxy":"http://localhost:8080" in package.json file.

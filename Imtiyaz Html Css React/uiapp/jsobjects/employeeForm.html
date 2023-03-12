@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="style2.css">
+        <script src="employee.js"></script>
+    </head>  
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1">Navbar</span>
+            </div>
+        </nav>
+        <div class="container mt-3">
+            <div class="alert alert-primary" role="alert">
+                <a class="btn btn-primary" href="index.html">Employee List</a>
+            </div>
+            <form name="myForm" id="myForm" onSubmit="return readFromAndValidate()">
+                <label for="">Enter Id</label>
+                <input type="number" name="empId" id="empId" required placeholder="Enter id here"/>
+                <br/><br/>
+                <label>Enter your name</label>
+                <input type="text" name="name" id="name" pattern="[a-zA-Z ]+" required placeholder="Enter name here"/>
+                <small>Name should not be numeric character</small>
+                <br /><br />
+                <label for="">Enter Salary</label>
+                <input type="number" name="salary" id="salary" required placeholder="Enter salary here"/>
+                <br/><br/>
+                <label for="">Enter City</label>
+                <input type="text" name="city" id="city" required placeholder="Enter city here"/>
+                <br/><br/>
+                <label for="">Enter Department</label>
+                <input type="text" name="department" id="department" required placeholder="Enter Dept here"/>
+                <br/><br/>
+                <button class="submitButton" onclick="addEmployee()">ADD EMPLOYEE</button>
+                <div id="result"></div>
+            </form>
+    </div>    
+    
+</body>
+</html>

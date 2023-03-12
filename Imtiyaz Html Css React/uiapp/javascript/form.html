@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="formscript.js"></script>
+    </head>
+
+    <body onLoad="mainFunc()">
+        <div>
+            <h2>HTML Form Elements</h2>
+            <form name="myForm" id="myForm" onSubmit="return readFromAndValidate()">
+                <label>Enter your name</label>
+
+                <input type="text" name="name" id="name" pattern="[a-zA-Z ]+"/>
+                <small>Name should not be numeric character</small>
+                <br /><br />
+                <label>Enter your email</label>
+                <input type="email" id="email" name="email" placeholder="This is username"/>
+                <br /><br />
+                <label>Enter your password</label>
+                <input type="password" id="password" name="password" pattern="[a-zA-Z0-9 $#_]{4,}" />
+                <br /><br />
+                <label>Your fav sport</label>
+                <input type="checkbox" value="Cricket" name="sport" />
+                <label for="">Cricket</label>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="Chess" name="sport" />
+                <label for="">Chess</label>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="Football" name="sport" />
+                <label for="">Football</label>
+                <br/><br/>
+                <label>Are you still a college student</label>
+                <input type="radio" value="yes" name="college" />
+                <label for="">Yes</label>
+                <input type="radio" value="no" name="college" />
+                <label for="">No</label>
+                <br/>
+                <textarea name="address" cols="20" rows="3"></textarea>
+                <br/><br/>
+                <label for="">Which city do you live in?</label> 
+                <select name="city" id="city">
+                    <option value="">----Select City----</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Pune">Pune</option>
+                </select>
+                <br/><br/>
+                <label for="">Enter your age</label>
+                <input type="number" name="age"  min="0" max="200" pattern="[0-9]+"/>
+                <br/><br/>
+                <label for="">Upload your CV</label>
+                <input type="file" name="file">
+                <br/><br/>
+                <label for="">Select your joining date</label>
+                <input type="date" name="joiningDate"  />
+                <br/><br/>
+                <label for="">Give the Rating</label>
+                <input type="range" min="0" max="5" step="1" name="rating" value="0" required />
+
+                <br/><br/>
+                <input type="submit" value="Post Info">
+            </form>
+        </div>
+    </body>
+</html>
+<!--form/Multipart-->

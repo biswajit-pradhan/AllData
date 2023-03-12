@@ -1,0 +1,223 @@
+1.var,object,keyword,datatype,operators,class
+
+2.naming conventions of a variabale,objects in the memory,constructor,static polymerphism\early binding/compile time/Method overloading,static block and keyword
+
+3.Model class,java bean,Service class,Business Class,parameter,argument,concatination,non primitive to primitive conversion-wrapper classes,typecast,boxing and unboxing in datatypes--java 1.5--conversion of primitive to non primitive automatically is known as autoboxing and vice versa is known as unboxing,String litefral and object,String is a immutable class,char array, == symbol checks the reference, equals() method goes to Object class,String literal pool,Intern() method is used for push into the String pool,pass by value and pass by reference,pass by reference is not supported by java,variable arguments,for each,git,github,log,interface,sonarqube
+
+4.check wheather an email is vallid or not,abstact classes,pure abstract class,extends,implements,multiple inheritance using interface,overloading,overriding,this keyword,super keyword,super(),chaining of constructors using this keyword,constructor calling using this keyword,static/compile time polymerphism using method overloading,overriding,downcast object creation
+
+5.Marker interface-those interfaces which has empty body,final keyword-if we want to make the method not be overriden the use final keyword,classes those are declared as final can't be extended/we can create child class from final declared classes,we can't change final variables values(constants),final and abstract- these 2 keywords are known as non-access modifiers,public/private/default/protected are known as access modifiers,public-anywhere,default-withen same package,private-withen same class,protected- withen it's subclass or same package only,static methods can't be overriden because static method belongs to a class not an object, strictness (highest)private-->default---->protected------>public(lowest),enum-always public,static and final,values() method in enum,we can have only constants in enum, if A extends B then it is known as Is-A relationship--->abstract keyword,if a class holds object of another class it is known as HAS-A realtionship,composition---->final keyword,coupling and cohesion,solid principles of OOPs,exception handling,logger
+
+private static final Logger logger=Logger.getLogger("ExpDemo");
+logger.info("start");
+logger.info("end");
+
+throwable class-try,catch,finally,throw,throws
+
+Error,Exception----checked,unchecked
+
+6.Object class----Throwable class---->Error,Exception
+Making own Exceptions---By extending RunTimeException or Exception,
+
+for running a java cpde in eclipse is (fn + ctrl + f11),
+
+NullPointerException-If we perform any operations on a null valued variable at that time compiler throws NullPointerException.
+
+Chaining of Exceptions and handling them, System.out.println() meaning,chaining of methods
+, all the static data and instance methods stores in the method areanot in stack or heap memory area,java architecture,jvm architecture,stream
+
+
+
+for writing some data in a file
+-------------------------------
+try(FileOutputStream fos=new FileOutputStream("path")){
+}
+
+catch(Exception e){
+e.printStackTrace();
+}
+
+
+7. (13 is the enter character),System.in goes to InputStream,System.out goes to PrintStream,DataInputStream,
+
+InputStream,OutPutStream(Byte Stream),Reader,Writter(Character Stream)-------all 4 are abstract classes,Reading a file,writing a file,coping a file data to another,
+
+->a sever is an application which can serve/handle multiple request at the same time
+->through pid a OS can know on which application what to do.pid(process id) is unique for each application.
+->ipconfig on cmd for knowing the ip address
+
+my ip-10.237.25.107
+
+my dns-10.5.5.5
+	 10.51.5.150
+	 10.76.5.100
+
+Serialization,
+
+interfaces does not having methods inside it is known as marker interfaces.
+
+
+8.Thereads,java runs in a jvm,garbage collector always makes eye in heap memory area if any data not referenced with stack then it kills that data. main() is a child process running in jvm, 
+
+
+
+for threading class should implement Runnable interface,create an object of the class and pass that as argument in Thread() class object then object.start()
+
+		classname r=new classname();
+		Thread t1=new Thread(r);
+		t1.start();
+
+Thread t1 = new Thread(r,"Biswajit");
+Thread t2 = new Thread(r,"Pradhan");
+//t1.setName("Biswajit");
+//t2.setName("Pradhan");
+
+synchronized is the keyword for thread to occur one at a time that apply on a method
+
+classes inside another class is known as inner class.inner classes can be private.
+
+A class inside a method is known as local class.
+
+Anonymous Class
+---------------
+It is basically implementation of methods during object creation of an anstract class or an interface.
+
+lambda method
+------------
+rule1- it should have only one method
+
+()->,
+
+Executor pool
+
+9. overiding equals() method,==,Collections,
+
+set,list and map are major 3 collections.
+Consumer Interface,ArrayList,get()-----to get a vlaue,add()----to add a value,Iterator,size()--to know the size,set()---to replace a value,remove()---to delete a value,clear()----to clear the list,clone()----to create a copy,isEmpty()---to know a list is empty or not, System.out::println()----just print the data,
+
+int newCapacity= (oldCapacity * 3)/2 +1;
+
+
+lombok,maven
+
+10.Maven
+--------
+Group ID-Unique 
+
+Comparable,comparator,stream,hashmap,Properties,JUnit,
+
+JUnit
+------
+It has 3 layers-Presentation(view),business(service),Persistence(database)
+
+testing-2 types-Functional and manual testing
+
+11.PostgreSQL
+-------------
+
+
+select datname from pg_database;
+\c postgres
+\c biswajit
+insert into users values(555);
+\l
+
+drop database,
+
+insert into (column name) values();
+
+
+create table if not exists emptable(
+	empid serial primary key,
+	username varchar(20) unique not null,
+	password varchar(10) not null,
+	status varchar(10) not null check(status in ('open','locked')) default 'open',
+	usertype varchar(10) not null check(usertype in ('user','admin')) default 'user',
+	created_on timestamp not null default current_timestamp);
+
+
+insert into emptable values(1,'biswajit','pradhan');
+insert into emptable values(2,'Dillip','pradhan');
+insert into emptable values(3,'Saikrishna','pradhan');
+
+
+C:\Program Files\PostgreSQL\14\bin>pg_restore -U postgres -d dvdrental C:\Users\BISWPRAD\Downloads\dvdrental.tar
+
+12.Postgresql
+=============
+-- select * from actor;
+-- select * from actor where first_name='Ed';
+-- select first_name as FIRSTNAME,last_name as LASTNAME from actor;
+-- select first_name ||' '||last_name as FULL_NAME from actor;
+-- select first_name ||' '||last_name as FULL_NAME from actor order by first_name asc;
+-- select first_name ||' '||last_name as FULL_NAME from actor order by first_name desc;
+-- select first_name ||' '||last_name as FULL_NAME from actor order by first_name desc,last_name asc;
+-- select last_name,LENGTH(first_name)AS len from actor order by len ASC;
+
+-- CREATE TABLE sort_demo(num INT);
+-- INSERT INTO sort_demo(num)bVALUES(1),(2),(3),(null);
+-- SELECT * FROM sort_demo ORDER BY num desc nulls last;
+
+-- select * from customer;
+-- select first_name,last_name,store_id from customer where store_id=2;
+-- select first_name,last_name from customer where first_name like 'B%';
+-- select first_name,last_name from customer where first_name like '%b%';
+-- select first_name,last_name from customer where first_name like '%b';
+-- select * from customer where first_name like '%b';
+-- select * from customer where first_name like '%z%' and last_name like '%w%';
+-- select * from customer where first_name like '%z%' or last_name like '%w%';
+-- select * from customer where first_name like '%z%' or last_name like '%w%' order by first_name desc;
+-- select * from customer where first_name like '%z%' or last_name like '%w%' order by first_name desc limit(10);
+
+-- select film_id,title,release_year from film order by film_id limit 4 offset 3;
+
+
+-- SELECT customer_id,rental_id,return_date FROM rental WHERE customer_id IN (1, 2) ORDER BY return_date DESC;
+
+-- SELECT customer_id,rental_id,return_date FROM rental WHERE customer_id in (1,2,3) ORDER BY return_date ASC;
+
+-- SELECT customer_id,payment_id,amount FROM payment WHERE amount BETWEEN 4 AND 9 order by amount asc;
+
+-- create table userlogin(
+-- uid integer primary key,
+-- 	password character varying(20) not null default 'biswajit',
+-- 	status integer not null default 1 check(status in(1,0))
+-- );
+-- create table userinfo(
+-- uid integer primary key,
+-- 	fname character varying(20) not null default 'unknown',
+-- 	lname character varying(20) not null default 'unknown',
+-- 	city character varying(20) not null default 'unknown',
+-- 	foreign key(uid) references userlogin(uid)
+-- );
+
+
+Soft Skills season-2
+====================
+
+hello,good morning,good evening,
+
+Steps of giving presentations=plan->prepare->practice->present
+
+
+
+Hibernate
+==========
+
+Establish the connection with database,it Create table and fields,it also execute the queries
+(Persistence.xml,JPA[Java Persistence API],JPQL/SQL)
+
+
+
+https://teams.microsoft.com/l/meetup-join/19:meeting_NTg0MGE1MjAtMjUxYi00MmQzLThhYmItOGE1YmFiOGU2ZGY3@thread.v2/0?context=%7B%22Tid%22:%2276a2ae5a-9f00-4f6b-95ed-5d33d77c4d61%22,%22Oid%22:%22ab52509e-3d97-40a6-a4bd-a66bb45e500a%22%7D
+
+
+
+
+
+Testing in Java
+===============
+2 dependency required
+
+1.Junit 4 ------
+2.Hamcrest----it is a runner to see the reports

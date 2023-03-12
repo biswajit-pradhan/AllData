@@ -1,0 +1,197 @@
+Step by Step on How to type emoji on VS Code
+
+1: Open VS Code IDE
+2: Click on the Extension Tab 
+3: search for :emojisense
+4: Instal it 
+
+Now, you have to edit the .json file to make it work perfectly
+
+5: Go to setting
+6: click on the extension tab
+7: click on :emojisense
+8: now on the right side of the screen, click on Edit in setting.json file
+
+then add  
+
+
+
+
+"emojisense.languages": {
+
+
+    "plaintext": {
+
+
+      "markupCompletionsEnabled": true,
+
+
+      "emojiDecoratorsEnabled": true
+
+
+    },
+
+
+    "javascript.validate.enable": false,
+
+
+    "abap": true,
+
+
+    "bat": true,
+
+
+    "bibtex": true,
+
+
+    "clojure": true,
+
+
+    "coffeescript": true,
+
+
+    "c": true,
+
+
+    "cpp": true,
+
+
+    "csharp": true,
+
+
+    "css": true,
+
+
+    "diff": true,
+
+
+    "dockerfile": true,
+
+
+    "fsharp": true,
+
+
+    "git-commit": true,
+
+
+    "git-rebase": true,
+
+
+    "go": true,
+
+
+    "groovy": true,
+
+
+    "handlebars": true,
+
+
+    "html": true,
+
+
+    "ini": true,
+
+
+    "java": true,
+
+
+    "javascript": true,
+
+
+    "javascriptreact": true,
+
+
+    "json": true,
+
+
+    "jsonc": true,
+
+
+    "latex": true,
+
+
+    "less": true,
+
+
+    "lua": true,
+
+
+    "makefile": true,
+
+
+    "markdown": true,
+
+
+    "objective-c": true,
+
+
+    "objective-cpp": true,
+
+
+    "perl6": true,
+
+
+    "php": true,
+
+
+    "powershell": true,
+
+
+    "jade": true,
+
+
+    "python": true,
+
+
+    "r": true,
+
+
+    "razor": true,
+
+
+    "ruby": true,
+
+
+    "rust": true,
+
+
+    "scss": true,
+
+
+    "sass": true,
+
+
+    "shaderlab": true,
+
+
+    "shellscript": true,
+
+
+    "sql": true,
+
+
+    "swift": true,
+
+
+    "typescript": true,
+
+
+    "typescriptreact": true,
+
+
+    "tex": true,
+
+
+    "vb": true,
+
+
+    "xml": true,
+
+
+    "xsl": true,
+
+
+    "yaml": true
+
+
+  }

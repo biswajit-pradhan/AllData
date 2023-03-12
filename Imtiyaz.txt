@@ -1,0 +1,512 @@
+package com.hibernate.app.main;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class App {
+	public static void main(String[] args) {
+		/*
+		 * Step 1: Reach out to Persistence.xml [mydb]
+		 * Step 2: Create EntityManager: this helps me to create tables using classes
+		 * Step 3: Initiate transaction
+		 * */
+		
+		try {
+//			Step-1
+			EntityManagerFactory entityAManageFactory
+				=Persistence.createEntityManagerFactory("hibernate");
+//			Step-2
+			EntityManager entityManager
+				=entityAManageFactory.createEntityManager();
+			
+//			Step-3
+			EntityTransaction entityTransaction
+				=entityManager.getTransaction();
+			System.out.println("DB Connection working!!");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}
+
+
+
+package com.hibernate.app.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity //it will twll hibernate to create a table names Employee
+public class Employee {
+	@Id //it will make id as primary key
+	private int id;
+	private String name;
+	private String email;
+	private String contact;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getContact() {
+		return contact;
+	}
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+	
+
+}
+
+
+
+
+
+<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.6.5.Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.5.1</version>
+		</dependency>
+
+	</dependencies>
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+<persistence-unit name="hibernate">
+<properties>
+<property name="javax.persistence.jdbc.url" value="jdbc:postgres://localhost:5432/hibernate" />
+<property name="javax.persistence.jdbc.user" value="postgres" />
+<property name="javax.persistence.jdbc.password" value="admin" />
+<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+<property name="hibernate.show_sql" value="false" />
+<property name="hibernate.format_sql" value="false" />
+<property name="hibernate.hbm2ddl.auto" value="update" />
+
+</properties>
+</persistence-unit>
+
+</persistence>
+
+
+
+
+https://github.com/imtiyaz-hirani/cg-jan-23/tree/main/MyHIbernateApp
+
+jPQL/Criteria Query-Query the class,Hibernate-App must be independent of the DB,Code Smells-Sonar
+
+
+Assignment
+==========
+CASE STUDY->HIBERNATE WITH JPA
+==============================
+Title- Solution For Flight Booking
+
+Entities:
+
+1. Customer
+2. Flight
+
+Tasks:
+
+1. Create Customer class with following instance variables
+	Id,name,contact,city
+2. Create flight class with following instance variables
+	Id,source,destination,departure_date,fare
+3. Create cases for ADD,UPDATE,DELETE and View ALL for Customer
+4. Create case for ADD Flight
+5. Display all Flights for given date
+6. Display all flight for given destination
+
+[Use GitHub as Reference]
+
+
+Day-3
+=====
+MVC- Model View Controller
+MOdel are those classes where databases are generated
+
+View-Layer 1
+Controller-Layer 2(Backend)
+
+1.Setup our spring MVC App
+
+
+Total 5 dependencies
+===============
+spring core,spring bean,spring context,spring web,spring webmvc----all version should same(6.0.3)
+
+<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>5.3.15</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>5.3.15</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>5.3.15</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>5.3.15</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>5.3.15</version>
+		</dependency>
+	</dependencies>
+
+
+
+SPEL(Spring Expression Language) Language,it is an extension of EL(Expression Language)
+
+
+
+CASE STUDY
+==========
+Spring MVC Project SetUp
+========================
+
+Title- My Shoping Portal
+
+Categories | Products | My Cart | Contact
+
+
+Mappings
+========
+/categories		categories.jsp
+/products		products.jsp
+/cart			cart.jsp
+/contact		contact.jsp
+
+
+Spring Dependency Injection(DI),Spring AutoWiring}->Spring is a inversion of COntrol(IoC) framework
+
+Controller to View Communication
+================================
+-Model <interface>
+
+request.addAttribute("name","value");
+
+-HttpServletRequest <class
+
+request.setAttribute("name","value");
+
+-ModelAndView <class>
+
+request.
+
+
+JSp-JAVA server pages
+JSP Tags=These tags allow us to write java code inside HTML tags
+
+1. Scriptlet tag
+<% java code %>
+
+ex.
+--
+<%
+int x=5;
+int y=10;
+out.println(x+y);
+%>
+
+
+
+JSP=Java+HTML
+
+Expression Tag
+==============
+<%=x+y %>   it is similar to out.println();
+
+
+
+Reading the data from jsp to controller
+=======================================
+
+1.Using HTML
+
+Information not sencitive-GET
+Information Sencitive-POST
+
+
+
+
+
+
+Spring MVC Controller-View Communication(Homework)
+==================================================
+
+Product
+-------
+id,title,price,rating
+
+
+JSP-
+dashboard.jsp	/dashboard.jsp
+
+products.jsp	/products.jsp
+
+Controller- ProductController
+Service- ProductService.java
+
+
+Create 5 products in service, add them in List and display them in products.jsp
+
+
+in dashboard give a link [All Products] when someone click on it , it should redirect to Products where id,title,price,rating are available.
+
+Create another link in dashboard [Add Product]  when someone click on it , it should redirect to (Enter Product Details)
+		|
+		|
+HTML FORM for title,price,rating
+		|
+		|
+add product button-----when click on it it should show product details in console---@RequestMapping("/add-product")
+
+
+Workflow of Spring 5.0
+======================
+
+DispacherServletInitializer->ServletConfig->Controller->Service->model->controller
+
+
+Creating REST APIs
+==================
+
+Spring REST API, Jackson Dependency,Rest Json,POSTMAN for Testing, Jackson dependency for auto conversion
+
+jackson core and databind - 2 dependencies from MVN Repository
+=============================================
+com.fasterxml.jackson.core
+
+
+Download postman Api tool for testing the APIs
+
+API Methods
+===========
+1.Logic processing->Responce = GET
+2. Take Input->Save in DB = POST
+3. Take new Value of Existing Data-> Edit the DB = PUT
+4. Take the ID-> Delete from DB = DELETE
+
+@AutoWired anotation is used for injecting dependency in a class
+
+
+Status Code of Postman
+======================
+
+200- ok
+500- logic issue
+404- api path is incorrect
+400- bad request
+
+
+Ways to take input
+==================
+
+Path Variable,Request Param,Request Body
+
+Ways to take input in Postman tool
+==================================
+
+1. /api/grade/{marks} = /api/grade/350
+
+2. /api/employee/one/{id} = /api/employee/one/2
+
+3. /api/employee/add = For this method should be POST,Paste the path, click on body,click on raw, change the type from TEXT to JSON,paste the data as json format,click on send
+
+4. /api/employee/delete = For this method should be DELETE,Paste the path, after pasting write /?id=3 , click on send
+
+
+REST API
+========
+
+GET/PUT/POST/DELETE
+
+input should be in json format
+
+@PathVriable , @RequestParam , @RequestBody
+
+Spring Boot
+===========
+
+3 layers
+
+1.RestController
+2.Service
+3.Data/Persistence
+
+
+@Enumerated(EnumType.STRING)
+private Gender gender;
+
+
+
+1.@ManyToMany----For creating many to many relationship
+2.@Embedable-----if you need to adding new column in a existing database but jpql is not work here
+3.Separate Entity ----if you need to jpql in adding new column in a existing database
+
+Controller Layer
+=================
+1. Anotations used for reading I/P--PathaVariable,RequestBody
+
+2. Autowire Service and call its method
+
+3. Give responce using ResponceEntity
+
+
+API
+===
+1.Create a POST API for Instructor
+2.Create a POST API for course
+3.Get all Instructors
+4.Get all Courses
+5.Assign a course to a instructor
+
+
+
+Mocking,Mocito
+
+
+
+
+tree digram-----flow chart
+
+
+jdk,eclipse,
+
+how classes are connected
+
+
+hybernate---aplication.properties
+
+business api should be said
+
+
+
+
+Code,Validation,Exception Handling,Testing,Security
+
+
+
+
+
+
+1.Code
+======
+i)SpringBootAplication Package 
+ii)Entities{Model Package}
+	->Relationship
+iii)APIs{RestController Package}
+iv)methods{Service Package}
+v)extend JpaRepository{Data Package}
+
+
+
+
+
+dt-31/01/2023
+
+HTML-Hyper Text Markup Language
+
+Html Tags
+=========
+
+1) Hrader Tag
+<h1>My Header</h1> ----Largest Size
+<h2>My Header</h2>
+<h3>My Header</h3>
+<h4>My Header</h4>
+<h5>My Header</h5>
+<h6>My Header</h6> ----Smallest Size
+
+Default Css: Header is black Color and bold
+
+
+
+#(hash) symbol used for reach id from head to body. it is called hashing in html
+
+.(dot) symbol is used for reach class from head to body
+
+
+
+2)other imp tags
+================
+<br> ----break or new line
+<p> --------paragraph
+&nbsp -----------for space
+
+3)List
+======
+<ul> ---- unordered list
+<li> ---- list
+<ol> ---- ordered list
+<dl> ---- description list
+<dt> ---- term or name in a description list
+<dd> ---- describe term or name in a description list
+
+HTML5 Input Attributes
+======================
+
+placeholder,readonly,disable,number,
+email,password,range,date,file,
+
+validation Attributes in HTML 5
+===============================
+required,pattern,min,max,size
+
+
+
+For calling JS from HTML body, we use EventHandlers
+-onClick()
+
+ReadyMade Objects in JS
+=======================
+-document
+-console

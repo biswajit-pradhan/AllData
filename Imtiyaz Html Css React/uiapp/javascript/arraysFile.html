@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            .allElements{
+                font-size: large;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        </style>
+        <script rel="text/javascript" src="arraysApp.js"></script>
+    </head>
+    <body onLoad="iterateArray()">
+        <div>
+            <h2>All Array Elements</h2>
+            <button onclick="fetchAllElements()">Fetch all Elements</button>
+            <div id="allelements" class="allElements"></div>
+            <div id="arrayLength"></div>
+        </div>
+        <br><br>
+        <div>
+            <button onclick="sortArray('ASC')">Sort array in ASC order</button>
+            <button onclick="sortArray('DESC')">Sort array in DESC order</button>
+        </div>
+        <br><br>
+        <label>Enter the number for filteration</label>
+        <input type="number" name="num" id="num">
+        <br><br>
+        <button onclick="filterArray('SMALL')">Filter for smaller elements</button>
+        <button onclick="filterArray('LARGE')">Filter for larger elements</button>
+        <br><br>
+        <label for="">Enter the number to search</label>
+        <input type="number" name="snum" id="snum">
+        <br>
+        <button onclick="searchElement()">Search</button>
+        <div id="findResult"></div>
+    </body>
+</html>

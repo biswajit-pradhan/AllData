@@ -1,0 +1,17 @@
+https://github.com/callicoder/java-collections-examples
+
+https://www.youtube.com/watch?v=cDd-eUtbm2k&list=PLlhM4lkb2sEhfuXL-2BDrJ67WkUdQ2v9b
+
+Exception handling -> exception,Error, how to handle exception  using try catch ,finally, throws,user defined exceptions
+
+ArrayList LinkedList
+
+whatever you remember abount CG assessment questions mail it  to me or write on whats app
+
+1.priyanka,charita,ankit,hemanth
+2.vishwanath,aksita,puspalata,aniket
+3.rahul,likitha
+
+
+
+Restless Component,components in 

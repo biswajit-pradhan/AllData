@@ -1,0 +1,90 @@
+Hello, good evening everybody. My name is biswajit pradhan. I am basically from Boudh,Odisha but currently staying in Bangalore. I did my bachlor degree from Nayagarh Autonomous college with computer science honours in the year of 2019 and also recently completed my MCA degree from Indira Gandhi Institue of technology,Sarang. I belong to a nuclear family. My hobbies are basically coding and cooking.Thats all about me. today I am going to tell something about a technology which is in trend now a days. that is cyber security.
+
+What is Cyber security?
+
+Cybersecurity refers to a set of techniques used to protect the integrity of networks, programs and data from attack, damage or unauthorized access.
+
+From a computing point of view, security comprises cybersecurity and physical security — both are used by enterprises to protect against unauthorized access to data centers and other computerized systems. Information security, which is designed to maintain the confidentiality, integrity, and availability of data, is a subset of cybersecurity. The use of cyber security can help prevent cyber attacks, data breaches, and identity theft and can aid in risk management.
+
+So when talking about cybersecurity, one might wonder “What are we trying to protect ourselves against?” Well, there are three main aspects we are trying to control,
+
+name:
+
+Unauthorised Access
+Unauthorised Deletion
+Unauthorised Modification
+
+These three terms are synonymous with the very commonly known CIA triad which stands for Confidentiality, Integrity, and Availability. The CIA triad is also commonly referred to as the three pillars of security and most of the security policies of an organization are built on these three principles. 
+
+The CIA Triad
+
+The CIA  triad which stands for Confidentiality, Integrity, and Availability is a design model to guide companies and organizations to form their security policies. It is also known as the AIC triad to avoid confusion with Central Intelligence Agency(CIA). The components of the triad are considered to be the most important and fundamental components of security. So let me brief you all about the three components 
+
+confidentiality
+
+Confidentiality is the protection of personal information. Confidentiality means keeping a client’s information between you and the client, and not telling others including co-workers, friends, family, etc. 
+
+Integrity
+
+Integrity, in the context of computer systems, refers to methods of ensuring that data is real, accurate and safeguarded from unauthorized user modification.
+
+Availability
+
+Availability, in the context of a computer system, refers to the ability of a user to access information or resources in a specified location and in the correct format.
+
+
+How is Cybersecurity implemented?
+
+There are numerous procedures for actually implementing cybersecurity, but there three main steps when actually fixing a security-related issue. 
+
+The first step is to recognize the problem that is causing the security issue, for example, we have to recognize whether there is a denial of service attack or a man in the middle attack. The next step is to evaluate and analyze the problem. We have to make sure we isolate all the data and information that may have been compromised in the attack. Finally, after evaluating and analyzing the problem, the last step is to develop a patch that actually solves the problem and brings back the organization to a running state.
+
+When identifying, analyzing and treating a cyber attack, there are three principals that are kept in mind for various calculations. They are:
+
+Vulnerability
+Threat
+Risk
+
+Types of Security
+
+1. Application Security –
+
+Most of the Apps that we use on our Cell-phone are Secured and work under the rules and regulations of the Google Play Store.
+There are 1.85 million different apps available for users to download. When we have other choices, this does not mean that all apps are safe.
+Many of the apps pretend to be safe, but after taking all information from us, the app users share information in money with the 3rd-party as well app stop working. Suddenly this comes under Cyberattack.
+The app must be installed from a trust-worthy platform, not from Google Chrome.
+
+2. Network Security –
+
+Guard your internal network against outside threats with increased network security.
+Sometimes we used to utilize free Wi-Fi in public areas such as cafes, Malls, etc. With this activity, 3rd Party starts tracking your Phone over the internet. If you are using any payment gateway, then your bank account can be Empty.
+So, avoid using Free Network because free network Doesn’t support Securities.
+
+3. Cloud Security –
+
+Cloud base data storage has become a popular option over the last decade. It enhances privacy and saves data on the cloud, making it excess able from any device but needs correct authentication.
+Some Famous platforms are Google Drive, Microsoft Cloud, Dropbox, etc.
+These platforms are free to some extent if we want to save more data than we have to pay.
+AWS is also a new Technique that helps to run your business over the internet and provides security to your data
+
+4. Mobile Security –
+
+Mobile is the very common gadgets we use daily, everything we excess is by mobile phone online class then the mobile phone, Call to the client then the mobile phone, sending money need a mobile phone and many more.
+The mobile phones made our life so easy only with a single touch we can be excess news from another country. Then this mobile phone must come under all security patches.
+We must lock all the payment applications by phone in-built app as well never share your phone password except with your family.
+
+5. Critical Infrastructure Security-
+
+All of the physical and virtual resources, systems, and networks that are necessary for a society’s economics, security, or any combination of the above to run smoothly are referred to as critical infrastructure. Food and agricultural industries, as well as transportation systems, comprise critical infrastructure.
+The infrastructure that is considered important might vary depending on a country’s particular demands, resources, and level of development, even though crucial infrastructure is comparable across all nations due to basic living requirements.
+Industrial control systems (ICS), such as supervisory control and data acquisition (SCADA) systems, which are used to automate industrial operations in critical infrastructure industries, are frequently included in critical infrastructure. SCADA and other industrial control system attacks are very concerning. They have the capacity to seriously undermine critical infrastructure, including transportation, the supply of oil and gas, electrical grids, water distribution, and wastewater collection.
+Due to the links and interdependence between infrastructure systems and sectors, the failure or blackout of one or more functions could have an immediate, detrimental effect on a number of sectors.
+
+6. Internet of Things (IoT) Security-
+
+Devices frequently run on old software, leaving them vulnerable to recently identified security vulnerabilities. This is generally the result of connectivity problems or the requirement for end users to manually download updates from a C&C centre.
+Manufacturers frequently ship Internet of Things (IoT) devices (such as home routers) with easily crackable passwords, which may have been left in place by suppliers and end users. These devices are easy targets for attackers using automated scripts for mass exploitation when they are left exposed to remote access.
+APIs are frequently the subject of threats such as Man in the Middle (MITM), code injections (such as SQLI), and distributed denial of service (DDoS) attacks since they serve as a gateway to a C&C centre. You can read more about the effects of attacks that target APIs here.
+
+And thats a short brief about the cyber security. Thank you.
+ 
